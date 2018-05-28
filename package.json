@@ -1,0 +1,26 @@
+{
+  "name": "react-popup-advanced",
+  "version": "1.0.0",
+  "description": "A seriously advanced React Popup container.",
+  "main": "init.tsx",
+  "scripts": {
+    "build": "webpack --config webpack.prod.js",
+    "dev": "webpack-dev-server --content-base dist/ --inline --hot --colors",
+    "start": "parcel index.html"
+  },
+  "author": "marcel heeremans",
+  "keywords": [],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^16.0.31",
+    "@types/react-dom": "^16.0.3",
+    "babel-core": "^6.26.0",
+    "node-sass": "^4.8.3",
+    "typescript": "^2.8.1"
+  },
+  "dependencies": {
+    "material-design-icons": "^3.0.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}

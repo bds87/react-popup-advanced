@@ -1,0 +1,298 @@
+$item-height:32px;
+$font-size:14px;
+$border-colour: rgb(194, 194, 195);
+$border-colour-item: rgba(194, 194, 195, 0.5);
+$back-colour: white;
+$back-colour-hover: #F0F0F0;
+$back-colour-right-img-hover: #bbc361;
+
+@mixin border-box() {
+    box-sizing:border-box; 
+    -moz-box-sizing:border-box;
+}
+
+@mixin flexbox {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+@mixin flexchild {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -ms-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+}
+
+// ---------------------------------------------------
+.test {
+    border: 5px solid red; 
+}
+
+
+.pop-tint-backdrop {
+    position: absolute;
+    z-index: 1000;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    // background-color: rgba(175, 179, 169, 0.233);
+    background: black;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.pop-container {
+    position: absolute;
+    z-index: 1001;
+    color: #292c35;
+    width: 250px;
+    height: 150px;
+    background-color: rgb(236, 236, 236);
+    // transition: opacity 1s;
+    border: 1px solid #a6a8ad;
+    //box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+
+    & .pop-header {
+        padding: 5px;
+        line-height: 25px;
+        border-bottom: 1px solid #b4b4b4;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    
+    & .pop-content {
+        position: relative;
+        padding: 5px;
+        background-color: white;
+
+        & .pop-border {
+            padding: 3px;
+            border: 1px solid #c7c5d6;
+            border-radius: 4px;
+        }
+    }
+    
+    & .pop-footer {
+        border-top: 1px solid #b4b4b4;
+        text-align: right;
+        padding: 5px;
+        line-height: 25px;
+
+        >.button {
+            display: inline-block;
+            font-size: small;
+            border: 1px solid #afafaf;
+            border-radius: 4px;
+            background-color: rgb(233, 233, 233);
+            padding: 0 10px 0 10px;
+            margin-left: 10px;
+            line-height: 19px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            &:hover {
+                background-color: #f7f7f7;
+                border-color: darkgoldenrod;
+            }
+        }
+    }
+}
+
+
+// .pop-container {
+//     position: absolute;
+//     top: 26px;
+//     left: 0px;
+//     color: white;
+//     border: 1px solid #16285d;
+//     width: 250px;
+//     height: 150px;
+//     background-color: #475c63;
+
+//     & .pop-header {
+//         padding: 5px;
+//         line-height: 25px;
+//     }
+    
+//     & .pop-content {
+//         padding: 5px;
+//         background-color: rgb(189, 189, 189);
+//     }
+    
+//     & .pop-footer {
+//         padding: 5px;
+//         line-height: 25px;
+//     }
+// }
+
+
+// ---------------------------------------------------
+
+.dda-container {
+    
+    position: absolute;
+    z-index: 3;
+    color: rgb(59, 64, 95);
+    box-shadow: rgb(202, 202, 183) 0px 0px 10px 1px;
+    @include border-box();
+
+    &.show>.dda-dropdown-list {
+        display: block;
+        text-align: left;
+    }
+
+    .dda-dropdown-list {
+        max-width: 200px;
+        max-height: 260px;
+        border: 2px solid $border-colour;
+        overflow-y: auto;
+        overflow-x: hidden;
+        display: none;
+        @include border-box();
+
+        & i {
+            width: 20px;
+            height: 20px;
+            margin-top: 6px;
+            line-height: 20px;
+            &.img-left {
+                margin-top: 6px;
+            }
+            &.material-icons {
+                margin-right: 6px;
+                margin-left: 5px;
+                &.material-icons.md-18 { 
+                    margin-right: 1px;
+                }
+            }
+        }
+
+        > div {
+            width:100%;
+            background: $back-colour;
+            border-bottom: solid 1px $border-colour-item;
+            @include border-box();
+            -webkit-transition: background 0.2s; /* Safari */
+            transition: background 0.2s;
+            
+            &:hover {
+                background: $back-colour-hover;
+            }
+
+            &.action {
+                cursor:pointer;
+            }
+
+            &.option {
+                cursor:pointer;
+            }
+
+            &.disabled {
+                color: #ababab;
+                background-color: #ebebeb0a;
+                cursor: default;
+            }
+
+            &.seperator {
+                height: 3px;
+                background-color: #efebeb;
+            }
+
+            &.header {
+                line-height: 21px !important;
+                background-color: #adadad;
+                color: white;
+                cursor: default;
+                padding-left: 5px;
+            }
+
+            &:last-child {
+                border-bottom: 0px;
+            }
+        }
+
+        .img-check {
+            margin-top: 11px;
+            margin-left: 6px;
+            margin-right: 4px;
+            width: 11px;
+            height: 11px;
+            display: inline-block;
+            border: 1px solid rgba(128, 128, 128, 0.541);
+            background-color: $back-colour;
+
+            &.option {
+                border-radius: 6px;
+            }
+
+            &.checked {
+                background-color: orange;
+            }
+        }
+    }
+
+    .dda-dropdown-item {
+        @include flexbox();
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        padding-left: 2px;
+        padding-right: 4px;
+        line-height:$item-height; 
+        vertical-align:middle; 
+        font-family: Roboto,sans-serif;
+        font-size: $font-size;
+    
+        >.flex {
+            @include flexchild();
+            margin-left: 4px;
+            margin-right: 4px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            &.increase-left-margin-fa {
+                margin-left: 24px;
+            }
+            &.increase-left-margin-md-18 {
+                margin-left: 30px;
+            }
+            &.increase-left-margin-md-24 {
+                margin-left: 35px;
+            }
+        }
+    
+        >[data-img-right] {
+            border: 1px solid rgba(211, 211, 211, 0);
+            border-radius: 3px;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+            &:hover {
+                border: 1px solid rgb(159, 158, 163);
+                background: $back-colour-right-img-hover;
+            }
+        }
+    }  
+}
+
+
+// http://google.github.io/material-design-icons/
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+ 
