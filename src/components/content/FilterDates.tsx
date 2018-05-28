@@ -1,7 +1,8 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import * as __utils from '../../utils';
 import { PopupActionItem, PopupContentBase } from '../PopupContent'
+import moment from 'moment';
 
 // -----------------------------------------
 // A content implementation featuring a number range filter
@@ -19,7 +20,7 @@ export class PopupFilterDates extends PopupContentBase {
         this.data = data || {
             operator1: "<=",
             operator2: "",
-            operand1: "2018-05-01",
+            operand1: moment().format("YYYY-MM-DD"),
             operand2: ""
         };
     }

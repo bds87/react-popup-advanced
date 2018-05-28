@@ -54,6 +54,10 @@ class Popup_EditName extends React.Component<popProp, editNameState> {
         this.setState( { name: newVal });
         this.props.onChange(newVal);
     }
+
+    private handleFocus(event: any) {
+        event.target.select();
+    }
     
     public render() {
          // get the correct style
@@ -77,7 +81,8 @@ class Popup_EditName extends React.Component<popProp, editNameState> {
                 type="text"
                 style={styleInput}
                 value={this.state.name}
-                onChange={this.handleInputChange} />
+                onChange={this.handleInputChange}
+                onFocus={this.handleFocus} />
         </div>)
     }
 

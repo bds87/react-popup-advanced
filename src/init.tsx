@@ -1,5 +1,5 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
+import React from "react";
+import ReactDOM from "react-dom";
 import { PopupContainer, PopupDirection } from './components/PopupContainer';
 import { PopupActionItem, PopupNotImpl } from './components/PopupContent';
 import { PopupEditName } from './components/content/EditName'
@@ -27,6 +27,10 @@ var filterData = (btn: PopupActionItem) => {
         btnDR.innerHTML = msg;
         btnDR.data = btn.data;
     }
+    if (btn.code == "Remove") {
+        btnDR.innerHTML = "- no filter -";
+        btnDR.data = undefined;
+    }
 }
 
 var btnDR: any = document.getElementsByClassName('test-dr')[0];
@@ -39,8 +43,52 @@ btnDR.addEventListener("click", () => {
         direction: PopupDirection.DownRight,
         tintBackDrop: true,
         header: "Filter between two numbers",
-        actions: ['Filter', 'Cancel'],
+        actions: ['Filter', 'Remove'],
         content: new PopupFilterNumberRange(filterData, initialState)
+    }
+
+    PopupContainer.show(props);
+});
+
+// -----------------------------
+
+var filteredDates = (btn: PopupActionItem) => {
+    if (btn.code == "Filter") {
+        btnUR.innerHTML = btn.data.operator1 + " " + btn.data.operand1;
+        btnUR.data = btn.data;
+    }
+    if (btn.code == "Remove") {
+        btnUR.innerHTML = "- no filter -";
+        btnUR.data = undefined;
+    }
+}
+
+var btnUR: any = document.getElementsByClassName('test-ur')[0];
+btnUR.addEventListener("click", () => {
+    var props: any = {
+        element: btnUR,
+        direction: PopupDirection.UpRight,
+        tintBackDrop: true,
+        header: "Select date range",
+        actions: ['Filter', 'Remove'],
+        content: new PopupFilterDates(filteredDates, btnUR.data)
+    }
+
+    PopupContainer.show(props);
+});
+
+// -----------------------------
+
+var btnUL: any = document.getElementsByClassName('test-ul')[0];
+btnUL.addEventListener("click", () => {
+    var props: any = {
+        element: btnUL,
+        direction: PopupDirection.UpLeft,
+        tintBackDrop: true,
+        header: "This is my header",
+        actions: ['OK', 'Cancel'],
+        model: {},
+        content: new PopupNotImpl()
     }
 
     PopupContainer.show(props);
@@ -63,46 +111,6 @@ btnDL.addEventListener("click", () => {
         actions: ['OK', 'Cancel'],
         content: new PopupEditName(newName, btnDL.innerHTML)
     }
-    PopupContainer.show(props);
-});
-
-// -----------------------------
-
-var filteredDates = (btn: PopupActionItem) => {
-    if (btn.code == "Filter") {
-        btnUR.innerHTML = btn.data.operator1 + " " + btn.data.operand1;
-        btnUR.data = btn.data;
-    }
-}
-
-var btnUR: any = document.getElementsByClassName('test-ur')[0];
-btnUR.addEventListener("click", () => {
-    var props: any = {
-        element: btnUR,
-        direction: PopupDirection.UpRight,
-        tintBackDrop: true,
-        header: "Select date range",
-        actions: ['Filter', 'Cancel'],
-        content: new PopupFilterDates(filteredDates, btnUR.data)
-    }
-
-    PopupContainer.show(props);
-});
-
-// -----------------------------
-
-var btnUL: any = document.getElementsByClassName('test-ul')[0];
-btnUL.addEventListener("click", () => {
-    var props: any = {
-        element: btnUL,
-        direction: PopupDirection.UpLeft,
-        tintBackDrop: true,
-        header: "This is my header",
-        actions: ['OK', 'Cancel'],
-        model: {},
-        content: new PopupNotImpl()
-    }
-
     PopupContainer.show(props);
 });
 
