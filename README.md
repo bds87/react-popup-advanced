@@ -1,22 +1,20 @@
 
-# An advanced React Dropdown Component 
+# An advanced React Popup Component 
 ## Key features
-* caters for different types of dropdown items (action, checks, header, seperator) 
-* lazily calls back for dropdown items
-* dropdown items are removed from the markup when dropdown is closed
-* a variety of events are raised on check, click, open/close etc
-* popup location is configurable (left/right/top/bottom)
-* the dropdown can be created through code using any html element as source
-* popup is closable through code
-* and much more!
+* caters for different types of popup items 
+* allows custom content in the popup content section
+
+
+# TODO  TODO    TODO
+
 
 ## Demo
-Have a look at the [demo-page](http://www.reactdropdown.marcelheeremans.com) to see what the dropdown can do for you!
+Have a look at the [demo-page](http://www.reactpopup.marcelheeremans.com) to see what the dropdown can do for you!
 
 ## Typescript
 Because I believe in typesafe code!  The code snippets below are extract from my Typescript test project.  An `index.d.ts` file has now been included within the bundle and should in most cases automatically give you intellisense.
 
-# Using the DropDown
+# Using the React Popup
 
 ## A basic 'fixed' dropdown items
 
