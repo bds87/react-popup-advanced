@@ -1,0 +1,11 @@
+lib_sourcemap/
+lib_to_npm/
+dist/
+!dist/index.html
+node_modules/
+.vscode/
+.npmignore
+info.txt
+gulpfile.js
+package-lock.json
+src/index.tsx
