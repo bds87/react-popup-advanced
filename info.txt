@@ -25,4 +25,5 @@ git remote set-url origin https://mheere@github.com/mheere/react-popup-advanced.
 git remote set-url origin https://agnes1995@github.com/mheere/react-popup-advanced.git
 
 // now lets try to branch for agnes1995
+// done but also installed gitlens
 
