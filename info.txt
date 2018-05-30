@@ -18,5 +18,11 @@ git config user.name
 git config --global user.name "Mona Lisa"
 git config --global user.name
 
-// this is how to assign a user to the origin  x
+// this is how to assign a user to the origin 
 git remote set-url origin https://mheere@github.com/mheere/react-popup-advanced.git
+
+// denied access to agnes1995
+git remote set-url origin https://agnes1995@github.com/mheere/react-popup-advanced.git
+
+// now lets try to branch for agnes1995
+
