@@ -9,3 +9,4 @@ node_modules/
 gulpfile.js
 package-lock.json
 src/index.tsx
+.DS_Store
