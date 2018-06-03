@@ -1,8 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import * as __utils from '../../utils';
 import { PopupActionItem, PopupContentBase } from '../PopupContent'
-import moment from 'moment';
+import * as moment from 'moment';
 
 // -----------------------------------------
 // A content implementation featuring a number range filter
