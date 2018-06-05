@@ -3,6 +3,7 @@ lib_to_npm/
 dist/
 !dist/index.html
 node_modules/
+.cache/
 .vscode/
 .npmignore
 gulpfile.js
