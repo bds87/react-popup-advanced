@@ -5,6 +5,7 @@ import { PopupActionItem, PopupNotImpl } from './components/PopupContent';
 import { PopupEditName } from './components/content/EditName'
 import { PopupFilterNumberRange } from './components/content/FilterNumbers'
 import { PopupFilterDates } from './components/content/FilterDates'
+import { PopupFilterStrings } from './components/content/FilterStrings'
 import * as __utils from './utils';
 
 import './styles/rpopup.scss'
@@ -116,17 +117,26 @@ btnDL.addEventListener("click", () => {
 
 // -----------------------------
 
+var doFilterString = (btn: PopupActionItem) => {
+    if (btn.code == "Filter") {
+        btnCenter.innerHTML = btn.data.operator + " " + btn.data.operand
+        btnCenter.data = btn.data;
+    }
+    if (btn.code == "Remove") {
+        btnCenter.innerHTML = "- no filter -";
+        btnCenter.data = undefined;
+    }
+}
+
 var btnCenter: any = document.getElementsByClassName('test-center')[0];
 btnCenter.addEventListener("click", () => {
     var props: any = {
         direction: PopupDirection.Center,
         tintBackDrop: true,
-        header: "This is my CENTERED header",
-        actions: ['OK', 'Cancel'],
-        model: {},
-        content: new PopupNotImpl()
+        header: "This is my CENTERED string filter",
+        actions: ['Filter', 'Remove'],
+        content: new PopupFilterStrings(doFilterString, btnCenter.data)
     }
-
     PopupContainer.show(props);
 });
 
