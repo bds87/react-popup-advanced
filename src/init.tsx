@@ -18,7 +18,7 @@ const filterTemp: any = {
     operator1: ">=",
     operator2: "<",
     operand1: "100",
-    operand2: "250"
+    operand2: "350"
 }
 
 var filterData = (btn: PopupActionItem) => {
