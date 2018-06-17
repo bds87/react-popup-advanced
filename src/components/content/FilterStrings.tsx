@@ -2,7 +2,6 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import * as __utils from '../../utils';
 import { PopupActionItem, PopupContentBase } from '../PopupContent'
-import * as moment from 'moment';
 
 // -----------------------------------------
 // A content implementation featuring a string filter (StartsWith, EndsWith, Contains, ..)
