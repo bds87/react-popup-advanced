@@ -45,8 +45,8 @@ export class PopupContainer  {
         this.tintBackDrop = props.tintBackDrop || true;
         this.header = props.header || "";
         this.content = props.content || new PopupNotImpl();
-        this.height = (this.content.height || 50) + 72 + 10;
-        this.width = this.content.width || 250;
+        this.height = (this.content.height || 50) + 72 + 10;    // use given content height + little extra for margins, padding, border etc
+        this.width = this.content.width || 250;                 // use given content width (or 250px if not given)
 
         this.elementBody = document.getElementsByTagName("body")[0];
 
