@@ -11,6 +11,10 @@ export enum PopupDirection {
     Center
 }
 
+// The popup container provides the given popup content a 'home', a hosting serve.
+// It provides the header, footer and the place-holder for the content.  
+// The given settings specify the width and height the content should be given, so the total height and width
+// is calculated based on these figures.
 export class PopupContainer  {
 
     private elementPopupContainer: any = undefined;
