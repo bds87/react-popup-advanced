@@ -1,14 +1,13 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import * as __utils from '../utils';
 
 // The base implementation of the content for the Popup Content placeholder
 export class PopupContentBase {
     public width: number;
     public height: number;
+    public data: any = {};
     public render(): JSX.Element { return <span>no implementation</span> }
     public _onClick: (actionItem: PopupActionItem) => void = null;
-
+    
     constructor(onClick: (actionItem: PopupActionItem) => void, width: number = 200, height: number = 200) {
         this._onClick = onClick;
         this.width = width;

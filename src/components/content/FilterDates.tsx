@@ -8,7 +8,6 @@ import moment from 'moment';
 // A content implementation featuring a number range filter
 // -----------------------------------------
 export class PopupFilterDates extends PopupContentBase {
-    private data: any = {};
 
     constructor(onClick: (actionItem: PopupActionItem) => void, data?: any) {
         super(onClick);

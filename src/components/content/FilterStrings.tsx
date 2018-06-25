@@ -7,7 +7,7 @@ import { PopupActionItem, PopupContentBase } from '../PopupContent'
 // A content implementation featuring a string filter (StartsWith, EndsWith, Contains, ..)
 // -----------------------------------------
 export class PopupFilterStrings extends PopupContentBase {
-    private data: any = {};
+    //private data: any = {};
 
     constructor(onClick: (actionItem: PopupActionItem) => void, data?: any) {
         super(onClick);
@@ -66,7 +66,7 @@ class Popup_FilterStrings extends React.Component<popProp, state> {
     
     public render() {
          // get the correct style
-         const style = {
+        const style = {
             lineHeight: "60px"
         };
 
@@ -87,7 +87,11 @@ class Popup_FilterStrings extends React.Component<popProp, state> {
                     <option value="EndWith">{'Ends With'}</option>
                     <option value="Contains">{'Contains'}</option>
                 </select>
-                <input autoFocus className='pop-border' type="text" style={styleInput} value={this.state.operand} onChange={(e) => this.handleOperandChange(e)} />
+                <input autoFocus className='pop-border' 
+                    type="text" 
+                    style={styleInput} 
+                    value={this.state.operand} 
+                    onChange={(e) => this.handleOperandChange(e)} />
             </div>
             )
     }

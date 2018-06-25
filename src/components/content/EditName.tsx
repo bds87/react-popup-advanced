@@ -37,6 +37,9 @@ interface editNameState {
     name: string;
 }
 
+// -----------------------------
+// The real steful React component hosted by the above PopupEditName
+// -----------------------------
 class Popup_EditName extends React.Component<popProp, editNameState> {
 
     constructor(props: popProp) {
