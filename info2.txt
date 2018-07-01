@@ -1,0 +1,19 @@
+npm list -g --depth=0
+
+// --------------------------------
+
+ES6 in browser natively
+How groovy - new browsers start to accept es6 modules out of the box! 
+Note the type='module' in the html script tag - <script src="./init.js" type="module"></script>
+And that 'import' references need the .js extension!
+And tsconfig.json ->  "target": "es6"
+
+// --------------------------------
+
+Using local-web-server to serve my index.html (from the ./dist folder)
+PS C:\git\learn\react-basic-3> cd dist
+PS C:\git\learn\react-basic-3\dist> ws
+Serving at http://marcel-nuc:8000, http://192.168.1.219:8000, http://127.0.0.1:8000
+
+// --------------------------------
+
