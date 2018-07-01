@@ -1,10 +1,11 @@
 
 
-    export enum DropDownDirection {
+    export enum PopupDirection {
         DownRight,
         DownLeft,
         UpRight,
         UpLeft,
+        Center
     }
 
     // -------------------------
