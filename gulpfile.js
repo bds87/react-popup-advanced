@@ -58,6 +58,7 @@ gulp.task('tsx-to-es5', function () {
     console.log("*** Processing tsx to es6 (typescript) to es5 (babel)");
     return gulp.src(['src/**/*.ts*', '!src/init.tsx'])
         .pipe(ts({
+            allowSyntheticDefaultImports: true,
             noImplicitAny: true,
             module: "commonjs",
             target: "es6",

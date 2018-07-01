@@ -29,3 +29,7 @@ git remote set-url origin https://agnes1995@github.com/mheere/react-popup-advanc
 
 // test A and B
 
+npm link                        // creates a symlink in the global folder
+npm link react-popup-advanced   // in the targer test folder
+
+

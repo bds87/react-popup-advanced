@@ -1,12 +1,12 @@
-import React from "react";
-import ReactDOM from "react-dom";
+//import React from "react";
+//import ReactDOM from "react-dom";
 import { PopupContainer, PopupDirection } from './components/PopupContainer';
 import { PopupActionItem, PopupNotImpl } from './components/PopupContent';
 import { PopupEditName } from './components/content/EditName'
 import { PopupFilterNumberRange } from './components/content/FilterNumbers'
 import { PopupFilterDates } from './components/content/FilterDates'
 import { PopupFilterStrings } from './components/content/FilterStrings'
-import * as __utils from './utils';
+//import * as __utils from './utils';
 
 import './styles/rpopup.scss'
 import './styles/demo.scss'
