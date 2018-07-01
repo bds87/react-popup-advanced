@@ -34,7 +34,8 @@ body {
     display: inline-block;
     width: 160px;
     line-height: 30px;
-    margin: 30px;
+    margin: 50px;
+    margin-top: 160px;
     text-align: center;
     background-color: #6d6d51;
     color: white;
@@ -50,16 +51,33 @@ body {
 .x-left {
     width: 200px;
     background-color: rgb(207, 207, 175);
+    padding: 5px;
+    font-size: 2em;
+    font-weight: bold;
 }
 
 .x-main {
     padding: 20px;
 }
 
+.x-header {
+    padding: 38px;
+    font-size: 4em;
+    font-weight: bold;
+}
 
+// .vertical-text {
+// 	transform: rotate(90deg);
+// 	transform-origin: left top 0;
+// }
 
-
-
+// .rotate {
+//     -webkit-transform: rotate(90deg);	
+//     -moz-transform: rotate(90deg);
+//     -ms-transform: rotate(90deg);
+//     -o-transform: rotate(90deg);
+//     transform: rotate(90deg);
+// }
 
 
 

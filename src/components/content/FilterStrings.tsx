@@ -14,7 +14,7 @@ export class PopupFilterStrings extends PopupContentBase {
 
         // initialise this popup
         this.height = 60;
-        this.width = 225;
+        this.width = 240;
 
         this.data = data || {
             operator: "StartsWith",

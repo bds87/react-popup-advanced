@@ -1,30 +1,14 @@
 
 # An advanced React Popup Component 
 ## Key features
-* caters for different types of popup items 
+* provides standard popup for EditName and Date, Number and String filters.
 * allows custom content in the popup content section
-
-
-# TODO  TODO    TODO
-
-# TODO  TODO    TODO
-
-# TODO  TODO    TODO
-
-# TODO  TODO    TODO
-
-# TODO  TODO    TODO
-
-# TODO  TODO    TODO
-
-# TODO  TODO    TODO
+* provides a standardised header
+* Any number of customisable action buttons hosted in the footer 
 
 
 ## Demo
 Have a look at the [demo-page](http://www.reactpopup.marcelheeremans.com) to see what the dropdown can do for you!
-
-## Typescript
-Because I believe in typesafe code!  The code snippets below are extract from my Typescript test project.  An `index.d.ts` file has now been included within the bundle and should in most cases automatically give you intellisense.
 
 # Using the React Popup
 
