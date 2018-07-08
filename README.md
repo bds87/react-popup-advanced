@@ -14,7 +14,7 @@ Have a look at the [demo-page](http://www.reactpopup.marcelheeremans.com) to see
 
 ## A basic 'fixed' dropdown items
 
-![FixedItems.png](http://www.reactdropdown.marcelheeremans.com/pics/fixeditems.png)
+![FixedItems.png](http://www.marcelheeremans.com/reactpopup/pics/examples.PNG)
 ```javascript
 ...
 // specify some fixed items
@@ -33,7 +33,7 @@ private onClick = (item: DropDownItem) => {
 ```
 Bit boring, let's see what else we can do. 
 ## Dynamic dropdown items (calls back for dropdown items)
-![RightImages.png](http://www.reactdropdown.marcelheeremans.com/pics/rightimages.png)
+![RightImages.png](http://www.marcelheeremans.com/reactpopup/pics/editname.PNG)
 ```javascript
 ...
 private getDynamicItems = () => {
