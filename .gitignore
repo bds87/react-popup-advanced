@@ -3,7 +3,7 @@ lib_to_npm/
 dist/
 dist2/
 test/
-test-real/
+test_real/
 !dist/index.html
 node_modules/
 .cache/
