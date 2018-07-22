@@ -2,8 +2,6 @@ lib_sourcemap/
 lib_to_npm/
 dist/
 dist2/
-test/
-test_real/
 !dist/index.html
 node_modules/
 .cache/
