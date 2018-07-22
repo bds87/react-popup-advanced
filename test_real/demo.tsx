@@ -2,11 +2,16 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import * as moment from 'moment';
 import { PopupContainer, PopupActionItem, PopupNotImpl, PopupFilterDates, PopupEditName, 
-    PopupFilterNumberRange, PopupDirection } from '../reexport';
+    PopupFilterNumberRange, PopupFilterStrings, PopupDirection } from 'react-popup-advanced';
 
-import '../styles/rpopup.scss'
-import '../styles/demo.scss'
-import '../styles/flex.scss'
+//import '../styles/flex.scss'
+//import '../styles/rpopup.scss'
+
+
+require('test-react-popup-advanced/styles/flex.css')
+require('test-react-popup-advanced/styles/rpopup.css')
+
+import './demo.scss'
 
 // -----------------------------
 
@@ -14,7 +19,7 @@ const filterTemp: any = {
     operator1: ">=",
     operator2: "<",
     operand1: "100",
-    operand2: "250"
+    operand2: "350"
 }
 
 var filterData = (btn: PopupActionItem) => {
@@ -113,17 +118,26 @@ btnDL.addEventListener("click", () => {
 
 // -----------------------------
 
+var doFilterString = (btn: PopupActionItem) => {
+    if (btn.code == "Filter") {
+        btnCenter.innerHTML = btn.data.operator + " " + btn.data.operand
+        btnCenter.data = btn.data;
+    }
+    if (btn.code == "Remove") {
+        btnCenter.innerHTML = "- no filter -";
+        btnCenter.data = undefined;
+    }
+}
+
 var btnCenter: any = document.getElementsByClassName('test-center')[0];
 btnCenter.addEventListener("click", () => {
     var props: any = {
         direction: PopupDirection.Center,
         tintBackDrop: true,
-        header: "This is my CENTERED header",
-        actions: ['OK', 'Cancel'],
-        model: {},
-        content: new PopupNotImpl()
+        header: "This is my CENTERED string filter",
+        actions: ['Filter', 'Remove'],
+        content: new PopupFilterStrings(doFilterString, btnCenter.data)
     }
-
     PopupContainer.show(props);
 });
 

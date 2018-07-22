@@ -50,14 +50,24 @@ body {
 
 .x-left {
     width: 200px;
-    background-color: rgb(207, 207, 175);
+    background-color: #f1f1f1;
     padding: 5px;
     font-size: 2em;
     font-weight: bold;
 }
 
 .x-main {
+    position: relative;
     padding: 20px;
+
+    span{
+        position: absolute;
+        left: 30px;
+        top: 30px;
+        font-size: 1.2em;
+        background-color: antiquewhite;
+        padding: 10px 20px;
+    }
 }
 
 .x-header {
