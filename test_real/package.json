@@ -8,6 +8,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "react-popup-advanced": "^0.1.0"
+    "react-popup-advanced": "^0.2.0"
   }
 }
