@@ -17,3 +17,6 @@ Serving at http://marcel-nuc:8000, http://192.168.1.219:8000, http://127.0.0.1:8
 
 // --------------------------------
 
+  OK  "start": "parcel index.html",
+  OK  "start2": "webpack-dev-server --content-base dist2/ --inline --hot --colors",
+  FAIL  "start3": "webpack-serve ./webpack.config.js"
