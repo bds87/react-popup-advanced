@@ -5,17 +5,16 @@
 * Allows custom content in the popup content section
 * Provides a standardised header and footer
 * Any number of customisable action buttons hosted in the footer 
-
+* Is activated programmatically (i.e. can be attached to onClick on any element)
+* TypeScript support
 
 ## Demo
 Have a look at the [demo-page](http://www.reactpopup.marcelheeremans.com) to see the react popup in action!
-
 
 ## **Load the CSS!**
 Do not forget to load the rpopup.css into your project (using a 'require' or other means)
 
 `require('react-popup-advanced/styles/rpopup.css')`
-
 
 # Using the React Popup Control
 The control provides a PopupContainer which contains a fixed header and footer. A PopupContent derived control is nestled in between these. There are four standard implementations of the PopupContent but you can easily write your own.
@@ -182,5 +181,7 @@ btnCenter.addEventListener("click", () => {
 
 |version | Notes |
 | ---- | ------ |
+v 0.2.0 | TypeScript support
 v 0.1.0 | Initial release.
+
 

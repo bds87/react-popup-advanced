@@ -1,6 +1,4 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import * as __utils from '../../utils';
 import { PopupActionItem, PopupContentBase } from '../PopupContent'
 
 // -----------------------------------------
@@ -8,7 +6,6 @@ import { PopupActionItem, PopupContentBase } from '../PopupContent'
 // -----------------------------------------
 export class PopupFilterNumberRange extends PopupContentBase {
     
-
     constructor(onClick: (actionItem: PopupActionItem) => void, data?: any) {
         super(onClick);
 

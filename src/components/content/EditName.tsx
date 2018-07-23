@@ -1,6 +1,4 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import * as __utils from '../../utils';
 import { PopupActionItem, PopupContentBase } from '../PopupContent'
 
 // -----------------------------------------

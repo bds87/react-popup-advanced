@@ -1,11 +1,5 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import * as moment from 'moment';
 import { PopupContainer, PopupActionItem, PopupNotImpl, PopupFilterDates, PopupEditName, 
-    PopupFilterNumberRange, PopupFilterStrings, PopupDirection } from 'test-react-popup-advanced';
-
-//import '../styles/flex.scss'
-//import '../styles/rpopup.scss'
+    PopupFilterNumberRange, PopupFilterStrings, PopupDirection } from 'react-popup-advanced';
 
 require('test-react-popup-advanced/styles/flex.css')
 require('test-react-popup-advanced/styles/rpopup.css')
